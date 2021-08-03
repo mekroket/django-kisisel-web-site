@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<!-- ======= Mobile nav toggle button ======= -->
+<button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+<!-- ======= Header ======= -->
+<header id="header">
+  <div class="d-flex flex-column">
+
+    <div class="profile">
+      <img src="{%static 'assets/img/profile-img.jpg'%}" alt="" class="img-fluid rounded-circle">
+      <h1 class="text-light"><a href="{%url 'anasayfa'%}">Oğuz Kaan Ekin</a></h1>
+      <div class="social-links mt-3 text-center">
+        <a href="#" class="twitter"><i class="bx bxl-github"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-youtube"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-discord"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="{%url 'anasayfa' %}"><i class="bx bx-home"></i> <span>Anasayfa</span></a></li>
+        <li><a href="{%url 'anasayfa' %}"><i class="bx bx-user"></i> <span>Hakkımda</span></a></li>
+        <li><a href="{%url 'anasayfa' %}"><i class="bx bx-file-blank"></i> <span>Özgeçmiş</span></a></li>
+        <li><a href="{%url 'anasayfa' %}"><i class="bx bx-book-content"></i> Portfoylo</a></li>
+        <li><a href="{%url 'anasayfa' %}"><i class="bx bx-server"></i> Servisler</a></li>
+        <li><a href="{%url 'anasayfa' %}"><i class="bx bx-envelope"></i> İletişim</a></li>
+
+      </ul>
+    </nav><!-- .nav-menu -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  </div>
+</header><!-- End Header -->
+
+    
+    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_v7ae9ywr.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; margin:auto"  loop  autoplay></lottie-player>
+    <div class="alert alert-success" role="alert"  style="width: 900px; height: 50px; margin:auto ">
+       Epostanız başarıyla gönderilmiştir . En kısa sürede dönüş yapılacaktır . İyi günler 🙏
+    </div>
+
+{% endblock body %}

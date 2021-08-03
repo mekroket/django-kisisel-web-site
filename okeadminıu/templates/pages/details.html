@@ -1,0 +1,110 @@
+{% extends 'base.html'  %}
+{% load static %}
+{% block body %}
+
+<!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{%static 'assets/img/profile-img.jpg'%}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="{%url 'anasayfa'%}">Oğuz Kaan Ekin</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-github"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-youtube"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-discord"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Anasayfa</span></a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-user"></i> <span>Hakkımda</span></a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-file-blank"></i> <span>Özgeçmiş</span></a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-book-content"></i> Portfoylo</a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-server"></i> Servisler</a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-envelope"></i> İletişim</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfoylo Detayları</h2>
+          <ol>
+            <li><a href="{%url 'anasayfa'%}">Anasayfa</a></li>
+            <li>Portfoylo Detay</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{{projeler.slider_resim1.url}}" class="img-fluid" alt="">
+            <img src="{{projeler.slider_resim2.url}}" class="img-fluid" alt="">
+            <img src="{{projeler.slider_resim3.url}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Proje Bilgisi</h3>
+            <ul>
+              <li><strong>Kategori</strong>: Web design & Backend & Frontend</li>
+              <li><strong>Proje Yapım Tarihi</strong>: 01 March, 2020</li>
+              <li><strong>Proje URL</strong>: <a href="#">www.example.com</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>{{projeler.baslik}}</h2>
+          <p>
+              {{projeler.icerik}}
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+{% endblock body %}

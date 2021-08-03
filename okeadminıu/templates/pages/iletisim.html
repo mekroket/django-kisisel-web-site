@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block body %}
+
+<!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" >
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{%static 'assets/img/profile-img.jpg'%}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="{%url 'anasayfa'%}">Oğuz Kaan Ekin</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-github"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-youtube"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-discord"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="{%url 'anasayfa' %}"><i class="bx bx-home"></i> <span>Anasayfa</span></a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-user"></i> <span>Hakkımda</span></a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-file-blank"></i> <span>Özgeçmiş</span></a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-book-content"></i> Portfoylo</a></li>
+          <li><a href="{%url 'anasayfa' %}"><i class="bx bx-server"></i> Servisler</a></li>
+          <li><a href="{%url 'iletisim' %}"><i class="bx bx-envelope"></i> İletişim</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+<!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact" style="margin-left:15%">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>İletişim</h2>
+          <p>Bana ulaşmak için burdan bilgilerinizi,mesajınızı girebilirsiniz. En kısa sürede size dönüş yapacağım</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Konum</h4>
+                <p>Türkiye/Karaman</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p><a href="mailto: info.oguzkaan@gmail.com"> info.oguzkaan@gmail.com</a></p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Numara</h4>
+                <p>05539191771</p>
+              </div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24708.008615997267!2d33.21838263375682!3d37.176447708635926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d98d6780ebefeb%3A0x31bde2e87bae26bc!2sKaraman%2C%20Karaman%20Merkez%2FKaraman!5e0!3m2!1str!2str!4v1626286006995!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form  method="post"  class="php-email-form">
+                {% csrf_token %}
+                
+              <div class="form-row">
+                {{ form }}
+                <div class="form-group col-md-6">
+                  
+                  
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  
+                  
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                
+                
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                
+                <div class="error-message"></div>
+                
+              </div>
+              <div class="text-center"><button type="submit">Gönder</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+{% endblock body %}

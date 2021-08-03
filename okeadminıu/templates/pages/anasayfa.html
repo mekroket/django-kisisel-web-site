@@ -1,0 +1,390 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+{% load crispy_forms_tags %}
+
+<!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" >
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{%static 'assets/img/profile-img.jpg'%}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="{%url 'anasayfa'%}">Oğuz Kaan Ekin</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/mekroket" class="twitter"><i class="bx bxl-github"></i></a>
+          <a href="https://www.youtube.com/channel/UCOvKB_NGWD8LAfOG3uqvP7A" class="facebook"><i class="bx bxl-youtube"></i></a>
+          <a href="https://www.instagram.com/__oguz_kaan__/?hl=tr" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://discord.gg/YZJYxwF4gF" class="google-plus"><i class="bx bxl-discord"></i></a>
+          <a href="https://www.linkedin.com/in/o%C4%9Fuz-kaan-ekin-b82585201/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Anasayfa</span></a></li>
+          <li><a href="#about"><i class="bx bx-user"></i> <span>Hakkımda</span></a></li>
+          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Özgeçmiş</span></a></li>
+          <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfoylo</a></li>
+          <li><a href="#services"><i class="bx bx-server"></i> Servisler</a></li>
+          <li><a href="{%url 'iletisim' %}"><i class="bx bx-envelope"></i> İletişim</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Oğuz Kaan Ekin</h1>
+      <p>I'm <span class="typed" data-typed-items="Backend Developer, Frontend Developer, Freelancer, Designer"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Hakkımda</h2>
+          <p>Hızlıca kendimi tanıtayım</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="{%static 'assets/img/oguzkaanekin.jpg'%}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Frontend &amp; Backend Developer.</h3>
+            <p class="font-italic">
+              
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Doğum Tarihi:</strong> 23 Temmuz 2002</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.okaanekin.com</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Telefon:</strong> 05539191771</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Şehir:</strong> Karaman/Türkiye</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Github:</strong> <a href="https://github.com/mekroket">Github/mekroket</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Yaş:</strong> 19</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Derece:</strong> Öğrenci</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong><a href="mailto: info.oguzkaan@gmail.com"> info.oguzkaan@gmail.com</a></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>İş Durumu:</strong> Freelence</li>
+                   
+
+                </ul>
+              </div>
+            </div>
+            <p>
+              Unity,veri bilimi, oyun tasarımı gibi alanlarda da kendimi geliştirmek istiyorum.
+              Ve bootcamp gibi organizasyonlara katılıyorum.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Aktivite</h2>
+          <p>Yapmış Olduğumuz Uygulamaların Memnuniyet Oranları,</p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="icofont-simple-smile"></i>
+              <span data-toggle="counter-up">1</span>
+              <p><strong>Mutlu Kullanıcı</strong> BİONLUK</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="icofont-document-folder"></i>
+              <span data-toggle="counter-up">5</span>
+              <p><strong>Projeler</strong> Eğitim Siteleri,Forum Siteleri,Blog Siteleri</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="icofont-live-support"></i>
+              <span data-toggle="counter-up">261</span>
+              <p><strong>Destek Verdiklerimiz</strong>  Discord,İnstagram,Udemy</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="icofont-users-alt-5"></i>
+              <span data-toggle="counter-up">2</span>
+              <p><strong>Ekip</strong> Codingerlab</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Yetenekler</h2>
+          <p>2018'den Beri Çalışmakta Olduğum Sistemler,</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">PYTHON <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">DJANGO <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Eğitim ve Çalışma Durumum</h2>
+          <p>Eğitim Hayatım,</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Eğitim</h3>
+            <div class="resume-item pb-0">
+              <h4>Oğuz Kaan Ekin</h4>
+              <h5>2002 - ∞</h5>
+              <p><em>2002 yılında doğdum.PiriReis İlkokulu ardından Mümine Hatun OrtaOkulu ve liseyi de Fatih Anadolu Lisesinde Tamamladım.Lise bölümüm sayılsal.Şuan Akdeniz Üniversitesi Bilgisayar Programcılığı öğrencisiyim.</em></p>
+              <ul>
+                <li>Karaman/Türkiye</li>
+                <li>05539191771</li>
+                <li>info.oguzkaan@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Yazılım Bilgim</h3>
+            <div class="resume-item">
+              <h4>FRONT-END &amp; BACK-END DEVELOPER</h4>
+              <h5>2019 - 2021</h5>
+              <p><em>Udemy Python Kursu 41 Öğrenci</em></p>
+              <p> Udemyden hem eğitim almaktayım hem de eğitim vermekteyim.
+              Udemy'den python,flask,django,numpy,JavaScript,git ve github eğitimlerini tamamladım
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Video Editör &amp; Graphic Design</h4>
+              <h5>2018 - 2021</h5>
+              <p><em>Premier Pro,Photoshop ve Animate ile projeler geliştirmekteyim</em></p>
+              <p>Projelerime Portfoylo kısmından ulaşabilirsiniz</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Profesyonel Süreç</h3>
+            <div class="resume-item">
+              <h4>WEB TASARIM</h4>
+              <h5>2020 - Present</h5>
+              <p><em><a href="www.bionluk.com">www.bionluk.com</a> </em></p>
+              <ul>
+                <li>HTML,CSS,JS TO PSD</li>
+                <li><a href="https://www.urlaciftlik.com/">Urlaciftlik şuan erişebilinir durumda !</a></li>
+                
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>BACKEND</h4>
+              <h5>2021 - Present </h5>
+              <p><em>Projeler Devam Ediyor</em></p>
+              <ul>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfoylo</h2>
+          <p>Bu süreçte yapmış olduğum projeler sizinle,</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              
+              
+            </ul>
+          </div>
+        </div>
+
+      
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+      {% for portfoylo in projeler  %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{portfoylo.ilk_resim.url}}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{{portfoylo.ilk_resim.url}}" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="{%url 'detay-sayfasi' portfoylo.id %}" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+      {% endfor %}
+          
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Servislerim</h2>
+          <p>Ekibimizle Size Verdiğimiz Hizmetlerimiz</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="icofont-computer"></i></div>
+            <h4 class="title"><a href="">Web Tasarım</a></h4>
+            <p class="description">Size En Uygun Tasarımı Yapıyoruz</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+            <h4 class="title"><a href="">Django Backend</a></h4>
+            <p class="description">Admin Yönetimli Kişisel Site,Forum Vb Sitelerinizi Yapıyoruz</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-earth"></i></div>
+            <h4 class="title"><a href="">Hosting & Domain & Server</a></h4>
+            <p class="description">Sitenizin Kurulumlarını Yapıyoruz</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="icofont-image"></i></div>
+            <h4 class="title"><a href="">Photoshop,Premier Pro,Animate</a></h4>
+            <p class="description">Tasarım,Animasyon,Edit Gibi Projelerinizi Yapıyoruz</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="icofont-settings"></i></div>
+            <h4 class="title"><a href="">Admin Yönetimi</a></h4>
+            <p class="description">Kolay ve Kulllanışlı Yönetim</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="icofont-tasks-alt"></i></div>
+            <h4 class="title"><a href="">Uyumlu Çalışma</a></h4>
+            <p class="description">Kaynak Dosyaları ve Github Üzerinden Paylaşım</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Oke</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Back-end by <a href="https://github.com/mekroket">Oke</a> <br>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+{% endblock body %}

@@ -1,0 +1,1 @@
+from .iletisimform import İletisimForm
