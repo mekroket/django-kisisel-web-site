@@ -8,6 +8,10 @@ class PortfoyloModel(models.Model):
     baslik = models.CharField(max_length=400)
     icerik = models.TextField(max_length=400)
 
+    kategori = models.CharField(max_length=50)
+    tarih = models.DateTimeField(auto_now_add=True)
+    url = models.CharField(max_length=50)
+
     class Meta:
         db_table = "Portfoylo"
         verbose_name = "Portfoylo"
@@ -15,4 +19,3 @@ class PortfoyloModel(models.Model):
     
     def __str__(self):
         return self.baslik
-

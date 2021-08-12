@@ -14,7 +14,7 @@ class İletisimForm(forms.ModelForm):
 
     mesaj = forms.CharField(widget=forms.Textarea(
         attrs={"class": "form-control","placeholder":"Mesajınız"}
-    ),required=True,max_length=50,label="Mesajınız")
+    ),required=True,max_length=900,label="Mesajınız")
 
 
     class Meta:
